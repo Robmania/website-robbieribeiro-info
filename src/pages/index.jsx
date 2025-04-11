@@ -30,7 +30,7 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>Allen Firth - Full-stack software developer and architect</title>
+        <title>Robbie Ribeiro - Full-stack software developer and architect</title>
         <meta
           name="description"
           content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
@@ -39,30 +39,29 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Full-stack software developer and architect with a passion for
-            building things.
+            Software engineer and architect.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Allen Firth. I&apos;ve been developing applications for
+            I&apos;m Robbie Ribeiro. I&apos;ve been developing applications for
             over <span class="font-semibold">two decades</span> now.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I build with{' '}
-            <strong>C# / Nodejs, Angular / React & Microsoft Azure</strong>.
+            <strong>C#, Angular & Microsoft Azure</strong>.
           </p>
           <div className="mt-12 flex gap-6">
             <SocialLink
-              href="https://github.com/halcharger"
+              href="https://github.com/Robmania"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://www.linkedin.com/in/allenfirth"
+              href="https://www.linkedin.com/in/robbieribeiro"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
             <Button
-              href="allenfirth-cv.pdf"
+              href="robbieribeiro-cv-april2025.pdf"
               variant="secondary"
               className="w-48"
             >

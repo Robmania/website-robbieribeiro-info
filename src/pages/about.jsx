@@ -25,10 +25,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Allen Firth</title>
+        <title>About - Robbie Ribeiro</title>
         <meta
           name="description"
-          content="I’m Allen Firth. I live in Durban, South Africa."
+          content="I’m Robbie Ribeiro. I currently live in Durban, South Africa."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -45,33 +45,23 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Allen Firth.
+              I’m Robbie Ribeiro.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                With over two decades of experience in the tech industry, I have
-                spearheaded development teams and engineered software solutions
-                for both sprawling corporations and nimble startups. My
-                speciality is in architecting and constructing intricate
-                distributed systems, adhering to the highest industry standards.
+                Possessing over two decades of experience within the technology sector, I have directed development teams and engineered software solutions for both expansive corporations and agile startups. 
+                My area of expertise lies in the design and implementation of sophisticated distributed systems, consistently maintaining the highest standards set by the industry.
               </p>
 
               <p>
-                I spent six and a half years expanding my technical horizons in{' '}
-                <strong>London</strong>, working for some of the{' '}
-                <strong>United Kingdoms</strong> premier corporations in{' '}
-                <span class="underline-text">Law, Insurance and Finance</span>.
-              </p>
-
-              <p>
-                I now run my own software development consultancy{' '}
+                I am a partner in a software development consultancy{' '}
                 <a href="https://www.codestream.co.za">CodeStream</a>.
               </p>
 
               <p>
-                The core principles of my software development philosophy are{' '}
-                <strong>simplicity</strong>, <strong>testing</strong> and{' '}
-                <strong>automation</strong>.
+                My software development methodology is rooted in the essentials of producing {' '}
+                <strong>clean</strong>, <strong>straightforward</strong>, 
+                and <strong>testable code</strong>.              
               </p>
 
               <blockquote>
@@ -82,24 +72,24 @@ export default function About() {
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink
-                href="https://github.com/halcharger"
+                href="https://github.com/Robmania"
                 icon={GitHubIcon}
                 className="mt-4"
               >
                 Follow on GitHub
               </SocialLink>
               <SocialLink
-                href="https://www.linkedin.com/in/allenfirth"
+                href="https://www.linkedin.com/in/robbieribeiro"
                 icon={LinkedInIcon}
                 className="mt-4"
               >
                 Follow on LinkedIn
               </SocialLink>
               <li className="mt-8 border-t border-zinc-100 pt-8 text-sm font-medium text-zinc-800 dark:border-zinc-700/40 dark:text-zinc-200 dark:hover:text-teal-500">
-                Email me on allen @ codestream.co.za
+                Email me on robbie@codestream.co.za
               </li>
               <li className="mt-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 dark:hover:text-teal-500">
-                Call me on +27 (0)60 840 7793
+                Call me on +27 (0)82 497 2398
               </li>
             </ul>
           </div>

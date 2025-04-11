@@ -27,7 +27,7 @@ export function Footer() {
                 <NavLink href="/contact">Contact</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Allen Firth. All rights reserved.
+                &copy; {new Date().getFullYear()} Robbie Ribeiro. All rights reserved.
               </p>
             </div>
           </Container.Inner>
