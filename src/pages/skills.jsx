@@ -8,7 +8,7 @@ export default function Skills() {
           <title>Skills - Robbie Ribeiro</title>
           <meta
             name="description"
-            content="A collection of my insights on software development, technical mentorship, and crafting robust, scalable systems, organized chronologically."
+            content="A collection of my insights on software development, technical mentorship, and crafting robust, scalable systems, organised chronologically."
           />
         </Head>
         <SimpleLayout
