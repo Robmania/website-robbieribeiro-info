@@ -49,8 +49,9 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Possessing over two decades of experience within the technology sector, I have directed development teams and engineered software solutions for both expansive corporations and agile startups. 
-                My area of expertise lies in the design and implementation of sophisticated distributed systems, consistently maintaining the highest standards set by the industry.
+              I am a seasoned software developer contracting locally and internationally with over 18 years of expertise in the full spectrum of Microsoft .NET technologies. 
+              I have a proven track record in executing end-to-end software development lifecycle, spanning initial conception, comprehensive analysis, and robust design, through to implementation and ongoing support. 
+              My portfolio spans diverse industries, demonstrating adaptability and a deep understanding of various sector-specific challenges.
               </p>
 
               <p>
@@ -59,14 +60,10 @@ export default function About() {
               </p>
 
               <p>
-                My software development methodology is rooted in the essentials of producing {' '}
+                I believe in creating {' '}
                 <strong>clean</strong>, <strong>straightforward</strong>, 
                 and <strong>testable code</strong>.              
               </p>
-
-              <blockquote>
-                <p>Keep it simple, Test everything, Automate always</p>
-              </blockquote>
             </div>
           </div>
           <div className="lg:pl-20">

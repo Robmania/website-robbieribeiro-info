@@ -33,7 +33,7 @@ export default function Home({ articles }) {
         <title>Robbie Ribeiro - Full-stack software developer and architect</title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="Over 18 years of industry experience developing software solutions."
         />
       </Head>
       <Container className="mt-9">
@@ -42,8 +42,8 @@ export default function Home({ articles }) {
             Software engineer and architect.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Robbie Ribeiro. I&apos;ve been developing applications for
-            over <span class="font-semibold">two decades</span> now.
+            I am Robbie Ribeiro. 
+            I have over <span class="font-semibold">18 years</span> of industry experience developing software solutions.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I build with{' '}

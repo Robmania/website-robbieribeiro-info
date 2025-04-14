@@ -29,12 +29,12 @@ export default function Experience() {
         <title>Experience - Robbie Ribeiro</title>
         <meta
           name="description"
-          content="I have over 20 years of experience in software development."
+          content="With a solid track record of success, I bring years of experience and a commitment to delivering value to any team I join."
         />
       </Head>
       <SimpleLayout
         title="Experience."
-        intro="With over 20 years of experience I have a lot to offer."
+        intro="With a solid track record of success, I bring years of experience and a commitment to delivering value to any team I join."
       >
         <div className="space-y-20">
           <ExperienceSection title="Mar 2023 - Present">
@@ -140,7 +140,7 @@ export default function Experience() {
           </ExperienceSection>
         </div>
         <p className="mt-10 text-sm text-zinc-600 dark:text-zinc-400">
-          Older experience available on request.
+        Details of earlier roles can be shared if needed. 
         </p>
       </SimpleLayout>
     </>
