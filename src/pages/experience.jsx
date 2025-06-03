@@ -37,7 +37,7 @@ export default function Experience() {
         intro="With a solid track record of success, I bring years of experience and a commitment to delivering value to any team I join."
       >
         <div className="space-y-20">
-          <ExperienceSection title="Mar 2023 - Present">
+          <ExperienceSection title="Mar 2023 - Jun 2025">
             <Contract
               title="Fluenty - Senior Lead .NET Developer"
               event="Remote"
