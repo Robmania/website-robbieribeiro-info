@@ -61,7 +61,7 @@ export default function Home({ articles }) {
               icon={LinkedInIcon}
             />
             <Button
-              href="robbieribeiro-cv-april2025.pdf"
+              href="robbieribeiro-cv-june2025.pdf"
               variant="secondary"
               className="w-48"
             >
