@@ -38,17 +38,17 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
             Software engineer and architect.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I am Robbie Ribeiro. 
-            I have over <span class="font-semibold">18 years</span> of industry experience developing software solutions.
+            My name is Robbie Ribeiro.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I build with{' '}
-            <strong>C#, Angular & Microsoft Azure</strong>.
+            Seasoned Full‑Stack Engineer & Architect | <strong>C#, .NET, Angular & Azure</strong> | 18+ years
           </p>
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            Building scalable, testable software for global clients.</p>
           <div className="mt-12 flex gap-6">
             <SocialLink
               href="https://github.com/Robmania"

@@ -47,11 +47,14 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               I’m Robbie Ribeiro.
             </h1>
+          <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            Seasoned Full‑Stack Engineer & Architect | <strong>C#, .NET, Angular & Azure</strong> | 18+ years
+          </div>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-              I am a seasoned software developer contracting locally and internationally with over 18 years of expertise in the full spectrum of Microsoft .NET technologies. 
-              I have a proven track record in executing end-to-end software development lifecycle, spanning initial conception, comprehensive analysis, and robust design, through to implementation and ongoing support. 
-              My portfolio spans diverse industries, demonstrating adaptability and a deep understanding of various sector-specific challenges.
+                I am a seasoned software developer contracting locally and internationally with over 18 years of expertise in the full spectrum of Microsoft .NET technologies.
+                I have a proven track record in executing end-to-end software development lifecycle, spanning initial conception, comprehensive analysis, and robust design, through to implementation and ongoing support.
+                My portfolio spans diverse industries, demonstrating adaptability and a deep understanding of various sector-specific challenges.
               </p>
 
               <p>
@@ -61,8 +64,8 @@ export default function About() {
 
               <p>
                 I believe in creating {' '}
-                <strong>clean</strong>, <strong>straightforward</strong>, 
-                and <strong>testable code</strong>.              
+                <strong>clean</strong>, <strong>straightforward</strong>,
+                and <strong>testable code</strong>.
               </p>
             </div>
           </div>
