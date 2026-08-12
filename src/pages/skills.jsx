@@ -18,6 +18,21 @@ export default function Skills() {
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-10">
             <div>
+              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Agentic & AI-Assisted Development</h3>
+              <p className="text-zinc-600 dark:text-zinc-400 mb-3">
+                In recent years I’ve extended this expertise into agentic software development, leveraging
+                AI-driven tooling to accelerate delivery, elevate code quality, and streamline architecture
+                and infrastructure decisions across complex systems.
+              </p>
+              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
+                <li>Agentic coding workflows embedded in day-to-day delivery</li>
+                <li>AI-assisted code review, refactoring, and test generation</li>
+                <li>Context engineering for large, long-lived codebases</li>
+                <li>Applying AI tooling to architecture and infrastructure decisions</li>
+              </ul>
+            </div>
+
+            <div>
               <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Back-End Development</h3>
               <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
                 <li>C#, .NET Core, ASP.NET, REST APIs</li>
@@ -30,7 +45,7 @@ export default function Skills() {
               <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Front-End Development</h3>
               <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
                 <li>JavaScript, HTML, CSS</li>
-                <li>Angular, Razor, Tailwind CSS</li>
+                <li>Angular, React, Razor, Tailwind CSS</li>
               </ul>
             </div>
 

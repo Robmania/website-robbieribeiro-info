@@ -33,7 +33,7 @@ export default function Home({ articles }) {
         <title>Robbie Ribeiro - Full-stack software developer and architect</title>
         <meta
           name="description"
-          content="Over 18 years of industry experience developing software solutions."
+          content="Over 20 years of industry experience developing software solutions."
         />
       </Head>
       <Container className="mt-9">
@@ -45,7 +45,7 @@ export default function Home({ articles }) {
             My name is Robbie Ribeiro.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Seasoned Full‑Stack Engineer & Architect | <strong>C#, .NET, Angular & Azure</strong> | 18+ years
+            Seasoned Full‑Stack Engineer & Architect | <strong>C#, .NET, Angular & Azure</strong> | 20+ years
           </p>
           <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
             Building scalable, testable software for global clients.</p>
@@ -61,7 +61,7 @@ export default function Home({ articles }) {
               icon={LinkedInIcon}
             />
             <Button
-              href="robbieribeiro-cv-june2025.pdf"
+              href="/robbieribeiro-cv-august2026.pdf"
               variant="secondary"
               className="w-48"
             >

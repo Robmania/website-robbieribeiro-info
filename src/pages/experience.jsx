@@ -1,24 +1,35 @@
 import Head from 'next/head'
 
-import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
 function ExperienceSection({ children, ...props }) {
   return (
     <Section {...props}>
-      <div className="space-y-16">{children}</div>
+      <div className="space-y-8">{children}</div>
     </Section>
   )
 }
 
 function Contract({ title, event: location, children }) {
   return (
-    <Card as="article">
-      <Card.Title as="h3">{title}</Card.Title>
-      {location && <Card.Eyebrow decorate>{location}</Card.Eyebrow>}
-      <Card.Description>{children}</Card.Description>
-    </Card>
+    <article className="rounded-2xl bg-zinc-50 p-6 shadow-sm ring-1 ring-zinc-900/5 transition hover:shadow-md dark:bg-zinc-800/40 dark:ring-white/10 dark:hover:bg-zinc-800/60 sm:p-8">
+      {location && (
+        <p className="flex items-center text-sm text-zinc-400 dark:text-zinc-500">
+          <span
+            className="mr-3 h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
+            aria-hidden="true"
+          />
+          {location}
+        </p>
+      )}
+      <h3 className="mt-3 text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+        {title}
+      </h3>
+      <div className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+        {children}
+      </div>
+    </article>
   )
 }
 
@@ -34,12 +45,30 @@ export default function Experience() {
       </Head>
       <SimpleLayout
         title="Experience."
+        headerWidth="max-w-3xl"
         intro="With a solid track record of success, I bring years of experience and a commitment to delivering value to any team I join."
       >
-        <div className="space-y-20">
+        <div className="space-y-12">
+          <ExperienceSection title="Jun 2025 - Present">
+            <Contract
+              title="Fluenty IT - Principal Architect & Developer"
+              event="Remote"
+            >
+              <p>
+                As the team scaled down, I stepped into the role of <strong>Principal Architect &amp; Developer</strong> at <strong>Fluenty IT</strong>, taking full ownership of the product’s architecture, development, and support. I own the technical roadmap and the architectural decisions around scalability and system evolution, and act as the primary technical point of contact for an actively used, multi-tenant production system.
+              </p>
+              <p className="mt-2">
+                I continue to develop the C# REST API and its dynamic field design, maintain the CQRS implementation and AWS SQS-driven microservices architecture, and manage ongoing optimisation of the PostgreSQL data layer. Alongside this, I’ve extended into agentic software development, using AI-driven tooling to accelerate delivery without compromising code quality.
+              </p>
+              <p className="mt-2 font-semibold">
+                C#, .NET Core, ASP.NET Core, React, REST API, CQRS, PostgreSQL, AWS SQS, Agentic AI Tooling
+              </p>
+            </Contract>
+          </ExperienceSection>
+
           <ExperienceSection title="Mar 2023 - Jun 2025">
             <Contract
-              title="Fluenty - Senior Lead .NET Developer"
+              title="Fluenty IT - Senior Lead .NET Developer"
               event="Remote"
             >
               <p>
@@ -88,7 +117,7 @@ export default function Experience() {
             </Contract>
           </ExperienceSection>
 
-          <ExperienceSection title="2017 - Present">
+          <ExperienceSection title="Mar 2017 - Jan 2022">
             <Contract
               title="The SPAR Group - Senior Software Developer"
               event="South Africa - Hybrid"
