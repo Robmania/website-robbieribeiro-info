@@ -117,26 +117,9 @@ export default function Experience() {
             </Contract>
           </ExperienceSection>
 
-          <ExperienceSection title="Mar 2017 - Jan 2022">
+          <ExperienceSection title="Mar 2017 - Present">
             <Contract
-              title="The SPAR Group - Senior Software Developer"
-              event="South Africa - Hybrid"
-            >
-              <p>
-                As a <strong>Senior Software Developer</strong> at <strong>The SPAR Group</strong>, I contributed to multiple internal projects, including the development of a Vendor Master Data Management user interface and leading the creation of SPAR’s central DataLake reporting database. I played a key role in migrating systems to the Azure Cloud.
-              </p>
-              <p className="mt-2">
-                By leveraging Azure Data Factory and Synapse, I enhanced data processing capabilities, delivering scalable reporting solutions and intuitive interfaces to support business operations.
-              </p>
-              <p className="mt-2 font-semibold">
-                Azure PaaS, Azure SQL, Azure Data Factory, Azure Synapse, Angular 14, C#, REST API
-              </p>
-            </Contract>
-          </ExperienceSection>
-
-          <ExperienceSection title="2017 - 2017">
-            <Contract
-              title="CodeStream - Senior Software Developer"
+              title="CodeStream - Partner & Software Developer"
               event="South Africa - Remote"
             >
               <p>
@@ -151,7 +134,24 @@ export default function Experience() {
             </Contract>
           </ExperienceSection>
 
-          <ExperienceSection title="2015 - 2017">
+          <ExperienceSection title="Mar 2017 - Jan 2022">
+            <Contract
+              title="The SPAR Group - Senior Software Developer"
+              event="South Africa - Hybrid"
+            >
+              <p>
+                As a <strong>Senior Software Developer</strong> at <strong>The SPAR Group</strong>, I contributed to multiple internal projects, including the development of a Vendor Master Data Management user interface and leading the creation of SPAR’s central DataLake reporting database. I played a key role in migrating systems to the Azure Cloud.
+              </p>
+              <p className="mt-2">
+                By leveraging Azure Data Factory and Synapse, I enhanced data processing capabilities, delivering scalable reporting solutions and intuitive interfaces to support business operations.
+              </p>
+              <p className="mt-2 font-semibold">
+                Azure PaaS, Azure SQL, Azure Data Factory, Azure Synapse, Angular, C#, REST API
+              </p>
+            </Contract>
+          </ExperienceSection>
+
+          <ExperienceSection title="Jan 2012 - Mar 2017">
             <Contract
               title="SMEasy - Senior Software Developer"
               event="South Africa - On-site"
@@ -163,7 +163,7 @@ export default function Experience() {
                 I integrated Azure cloud services and optimized data workflows, delivering robust solutions that enhanced the platform’s functionality and user adoption.
               </p>
               <p className="mt-2 font-semibold">
-                C#, ASP.NET Core, Azure PaaS, Azure SQL, Azure Data Factory, Angular 14
+                C#, ASP.NET, SQL Server, Azure
               </p>
             </Contract>
           </ExperienceSection>
