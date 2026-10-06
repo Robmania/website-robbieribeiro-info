@@ -11,7 +11,7 @@ function ExperienceSection({ children, ...props }) {
   )
 }
 
-function Contract({ title, event: location, children }) {
+function Contract({ title, project, event: location, children }) {
   return (
     <article className="rounded-2xl bg-zinc-50 p-6 shadow-sm ring-1 ring-zinc-900/5 transition hover:shadow-md dark:bg-zinc-800/40 dark:ring-white/10 dark:hover:bg-zinc-800/60 sm:p-8">
       {location && (
@@ -26,6 +26,11 @@ function Contract({ title, event: location, children }) {
       <h3 className="mt-3 text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
         {title}
       </h3>
+      {project && (
+        <p className="mt-1 text-sm font-medium text-orange-600 dark:text-orange-400">
+          {project}
+        </p>
+      )}
       <div className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
         {children}
       </div>
@@ -49,9 +54,35 @@ export default function Experience() {
         intro="With a solid track record of success, I bring years of experience and a commitment to delivering value to any team I join."
       >
         <div className="space-y-12">
+          <ExperienceSection title="Feb 2026 - Present">
+            <Contract
+              title="Fluenty IT - Principal Architect & Developer"
+              project="Project: Nigerian Payroll Platform"
+              event="Remote"
+            >
+              <p>
+                Sole architect and developer of a live, multi-tenant payroll platform for Nigerian employers. It calculates PAYE tax and statutory deductions, and produces payslips and compliance reports.
+              </p>
+              <p className="mt-2">
+                I own architecture, development, AWS infrastructure, releases and client support. I use AI-assisted development to ship faster.
+              </p>
+              <ul className="mt-2 list-disc space-y-1 pl-5">
+                <li>Built an event-sourced .NET API on the Critter Stack (Wolverine and Marten on PostgreSQL).</li>
+                <li>Implemented Nigerian statutory rules: PAYE, pension, NHF, NHIS, NSITF and ITF.</li>
+                <li>Built the Next.js web app, including an employee self-service portal.</li>
+                <li>Met GDPR and NDPA requirements: field-level encryption, audit logging and data retention.</li>
+                <li>Run deployments on AWS (EKS, RDS, KMS) with Terraform.</li>
+              </ul>
+              <p className="mt-2 font-semibold">
+                Critter Stack, Wolverine, Marten, Event Sourcing, .NET, PostgreSQL, Next.js, AWS
+              </p>
+            </Contract>
+          </ExperienceSection>
+
           <ExperienceSection title="Jun 2025 - Present">
             <Contract
               title="Fluenty IT - Principal Architect & Developer"
+              project="Project: Property Leasing Management System"
               event="Remote"
             >
               <p>
@@ -69,6 +100,7 @@ export default function Experience() {
           <ExperienceSection title="Mar 2023 - Jun 2025">
             <Contract
               title="Fluenty IT - Senior Lead .NET Developer"
+              project="Project: Property Leasing Management System"
               event="Remote"
             >
               <p>
@@ -86,6 +118,7 @@ export default function Experience() {
           <ExperienceSection title="Dec 2021 - Sep 2022">
             <Contract
               title="Clifford Chance - Senior Full-Stack Developer"
+              project="Project: Partnership Services Management Application"
               event="Remote"
             >
               <p>
@@ -103,6 +136,7 @@ export default function Experience() {
           <ExperienceSection title="Nov 2021 - Dec 2021">
             <Contract
               title="DVT (Kantar) - Senior C# Developer"
+              project="Project: Kantar QA Automation Platform"
               event="Remote"
             >
               <p>
@@ -120,6 +154,7 @@ export default function Experience() {
           <ExperienceSection title="Mar 2017 - Present">
             <Contract
               title="CodeStream - Partner & Software Developer"
+              project="Project: IoT SaaS Data Ingestion Platform"
               event="South Africa - Remote"
             >
               <p>
@@ -137,6 +172,7 @@ export default function Experience() {
           <ExperienceSection title="Mar 2017 - Jan 2022">
             <Contract
               title="The SPAR Group - Senior Software Developer"
+              project="Projects: Vendor Master Data Management UI, Central DataLake"
               event="South Africa - Hybrid"
             >
               <p>
@@ -154,6 +190,7 @@ export default function Experience() {
           <ExperienceSection title="Jan 2012 - Mar 2017">
             <Contract
               title="SMEasy - Senior Software Developer"
+              project="Project: SMEasy - Business Management & Accounting Application"
               event="South Africa - On-site"
             >
               <p>
