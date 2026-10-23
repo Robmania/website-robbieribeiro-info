@@ -24,7 +24,7 @@ Deployed to Azure Static Web Apps via `.github/workflows/azure-static-web-apps-p
 
 ## Architecture
 
-- `src/pages/` — routes: `index`, `about`, `skills`, `experience`, `contact`. Nav links live in **two** places in `src/components/Header.jsx` (`MobileNavItem` list and `NavItem` list) plus `src/components/Footer.jsx`; adding a page means editing all three.
+- `src/pages/` — routes: `index`, `about`, `skills`, `experience`, `work`, `contact`, plus `projects/[slug]` (static pages generated from `src/lib/projects.js`, which also feeds the `ProjectCard`s on home and `/work`). Each project's `experienceId` must match an `id` on a `Contract` in `experience.jsx`; the home page "Recent experience" rows link to those ids too. Nav links live in **two** places in `src/components/Header.jsx` (`MobileNavItem` list and `NavItem` list) plus `src/components/Footer.jsx`; adding a page means editing all three.
 - `src/components/` — presentational building blocks shared across pages. `Container` sets the page gutter/max-width, `Card` and `Section` structure list content, `SimpleLayout` is the standard title + intro page shell.
 - `src/styles/tailwind.css` — the only global stylesheet, imported from `src/pages/_app.jsx`.
 - `@/*` resolves to `src/*` (`jsconfig.json`).
@@ -35,14 +35,28 @@ Tailwind runs in `darkMode: 'class'`. An inline script in `src/pages/_document.j
 
 ### Layout shell
 
-`_app.jsx` renders a fixed background layer plus `Header` / `<main>` / `Footer`. `Header` measures itself and writes CSS custom properties (`--header-position`, `--content-offset`, etc.) so the avatar shrinks and pins on scroll — this only runs on `/` (`isHomePage`). Changes to header markup can break those measurements.
+`_app.jsx` renders `Header` / `<main>` / `Footer`; the page background comes from `<body>` in `_document.jsx`. The header is static (name, nav, mode toggle) with no scroll behaviour.
+
+### Palette
+
+The brand palette, used by both the site and the CV:
+
+| Name | Hex | Use |
+|---|---|---|
+| Floral white (`floral`) | `#fffcf2` | light background |
+| Dust grey (`dust`) | `#ccc5b9` | lines, borders |
+| Charcoal brown (`charcoal`) | `#403d39` | secondary / body text |
+| Carbon black (`carbon`) | `#252422` | dark background, primary text |
+| Spicy paprika (`accent-500`) | `#eb5e28` | highlights |
+
+`tailwind.config.js` defines these as named Tailwind colours. The font is Inter Tight, loaded from Google Fonts in `_document.jsx`. Orange fails contrast as small text on `floral`, so use it for marks, borders, buttons and large type only. Every page uses this palette; don't reintroduce the template's `zinc` classes. `mockups/` holds the design canvas files the home page was built from.
 
 ## Template leftovers
 
 This fork removed the blog. Expect dead code from the original template and do not treat it as active:
 
 - `next.config.mjs` still wires up MDX (`@next/mdx`, `remark-gfm`, `rehype-prism`) and `pageExtensions` still includes `mdx`, but there are no `.mdx` files.
-- `src/components/ArticleLayout.jsx` and `src/components/Prose.jsx` are unused; `src/styles/prism.css` is not imported.
+- `src/components/ArticleLayout.jsx`, `Prose.jsx`, `Card.jsx`, `Button.jsx` and `src/images/avatar.jpg` are unused; `src/styles/prism.css` is not imported.
 - `_document.jsx` links to `/rss/feed.xml` and `/rss/feed.json`, which are never generated.
 
 ## Conventions
@@ -53,7 +67,7 @@ Prettier: single quotes, no semicolons, with `prettier-plugin-tailwindcss` sorti
 
 `cv/` holds the editable Word sources; `public/` holds only the exported PDF, because everything under `public/` is published to the live site. The download button in `src/pages/index.jsx` links the PDF by filename, so a new export means updating that link.
 
-The PDF is a Word export with a two-column layout (sidebar: Skills / Qualifications / Contact; main column: Profile / Experience). To update it, edit `word/document.xml` inside the .docx rather than rebuilding the document — that preserves the design exactly. Then export with Word itself:
+The PDF is a Word export with a single-column layout, built so AI and ATS parsers read it in order: name and contact block, then Profile, Skills, Experience, Qualifications. Keep it that way — no tables, text boxes or multi-column sections, and keep contact details in the body text, not Word's page header (many parsers skip headers). Colours follow the palette above on a white page; paprika is used only for heading rules and the dot after the name, never small text. To update it, edit `word/document.xml` inside the .docx rather than rebuilding the document — that preserves the design exactly. Then export with Word itself:
 
 ```powershell
 $word = New-Object -ComObject Word.Application

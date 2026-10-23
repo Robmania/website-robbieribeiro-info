@@ -6,20 +6,22 @@ export function Section({ title, subTitle, children }) {
   return (
     <section
       aria-labelledby={id}
-      className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40"
+      className="flex flex-wrap gap-x-12 gap-y-4 border-t border-dust pt-8 dark:border-charcoal"
     >
-      <div className="grid grid-cols-1 items-baseline gap-y-8 md:grid-cols-5 md:gap-x-8">
-        <h2
-          id={id}
-          className="text-sm font-semibold text-zinc-800 dark:text-zinc-100"
-        >
-          {title}
-          <br />
-          {subTitle}
-        </h2>
+      <h2
+        id={id}
+        className="flex-[0_0_180px] text-[15px] text-charcoal dark:text-dust"
+      >
+        {title}
+        {subTitle && (
+          <>
+            <br />
+            {subTitle}
+          </>
+        )}
+      </h2>
 
-        <div className="md:col-span-4">{children}</div>
-      </div>
+      <div className="min-w-0 flex-[1_1_420px]">{children}</div>
     </section>
   )
 }

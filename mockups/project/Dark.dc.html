@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Robbie Ribeiro — Dark terminal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#252422}
+a{color:#fffcf2;text-decoration:none}
+a:hover{color:#eb5e28}
+</style>
+</helmet>
+<div style="font-family: 'Space Grotesk', system-ui, sans-serif; color: #fffcf2; background: #252422; min-height: 100%">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; border-bottom: 1px solid #403d39">
+<a href="#" style="font-family: 'JetBrains Mono', monospace; font-size: 15px"><span style="color: {{accent}}">~/</span>robbie-ribeiro</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-family: 'JetBrains Mono', monospace; font-size: 14px">
+<a href="#" style="color: #ccc5b9">about</a>
+<a href="#" style="color: #ccc5b9">experience</a>
+<a href="#" style="color: #ccc5b9">skills</a>
+<a href="#" style="color: #ccc5b9">contact</a>
+</nav>
+</header>
+
+<section style="padding: 128px 0 96px">
+<p style="margin: 0 0 32px; font-family: 'JetBrains Mono', monospace; font-size: 15px; color: {{accent}}">// Robbie Ribeiro — software engineer &amp; architect</p>
+<h1 style="margin: 0; font-size: clamp(52px, 7.5vw, 112px); line-height: 0.98; font-weight: 600; letter-spacing: -0.04em; max-width: 1080px">I design and build software that lasts<span style="color: {{accent}}">_</span></h1>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px; margin-top: 56px">
+<p style="margin: 0; flex: 1 1 480px; max-width: 600px; font-size: 20px; line-height: 1.55; color: #ccc5b9">Full-stack engineer and architect with 20+ years in C#, .NET, Angular and Azure. I build scalable, testable platforms for global clients, and use AI-assisted development to ship them faster.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 8px; background: {{accent}}; color: #252422; font-size: 15px; font-weight: 600">Download CV
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v9m0 0 3.5-3.5M8 12 4.5 8.5"></path></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 8px; border: 1px solid #403d39; color: #fffcf2; font-size: 15px; font-weight: 500">View experience</a>
+</div>
+</div>
+</section>
+
+<section aria-label="At a glance" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-top: 1px solid #403d39; border-bottom: 1px solid #403d39">
+<div style="padding: 32px 24px 32px 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">experience</p>
+<p style="margin: 10px 0 0; font-size: 36px; font-weight: 600; letter-spacing: -0.02em">20+ years</p>
+</div>
+<div style="padding: 32px 24px 32px 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">stack</p>
+<p style="margin: 10px 0 0; font-size: 36px; font-weight: 600; letter-spacing: -0.02em">.NET · Angular</p>
+</div>
+<div style="padding: 32px 24px 32px 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">cloud</p>
+<p style="margin: 10px 0 0; font-size: 36px; font-weight: 600; letter-spacing: -0.02em">Azure · AWS</p>
+</div>
+<div style="padding: 32px 24px 32px 0">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">ai-first since</p>
+<p style="margin: 10px 0 0; font-size: 36px; font-weight: 600; letter-spacing: -0.02em">Jun 2025</p>
+</div>
+</section>
+
+<section aria-labelledby="d-recent" style="padding: 112px 0 0">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 32px">
+<h2 id="d-recent" style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.03em">Recent work</h2>
+<a href="#" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{accent}}">all experience →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+<sc-for list="{{roles}}" as="r" hint-placeholder-count="3">
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #403d39">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">{{r.dates}}</p>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.25">{{r.project}}</h3>
+<p style="margin: 0; font-size: 15px; font-weight: 500; color: #fffcf2">{{r.role}}</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #ccc5b9; flex-grow: 1">{{r.summary}}</p>
+<p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #ccc5b9">{{r.tags}}</p>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section aria-labelledby="d-skills" style="padding: 112px 0 0">
+<h2 id="d-skills" style="margin: 0 0 32px; font-size: 44px; font-weight: 600; letter-spacing: -0.03em">Toolkit</h2>
+<sc-for list="{{skills}}" as="s" hint-placeholder-count="5">
+<div style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 22px 0; border-top: 1px solid #403d39">
+<p style="flex: 0 0 220px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #ccc5b9">{{s.group}}</p>
+<p style="flex: 1 1 400px; margin: 0; font-size: 18px; line-height: 1.5">{{s.items}}</p>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="d-contact" style="padding: 144px 0 112px; text-align: center">
+<p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{accent}}">$ contact --robbie</p>
+<h2 id="d-contact" style="margin: 0 auto; max-width: 820px; font-size: clamp(40px, 6vw, 80px); line-height: 1; font-weight: 600; letter-spacing: -0.04em">Got a hard problem? Let’s talk.</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 40px">
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; background: #fffcf2; color: #252422; font-size: 15px; font-weight: 600">Send a message</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; border: 1px solid #403d39; color: #fffcf2; font-size: 15px; font-weight: 500">LinkedIn</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; border: 1px solid #403d39; color: #fffcf2; font-size: 15px; font-weight: 500">GitHub</a>
+</div>
+</section>
+
+<footer style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 28px 0 40px; border-top: 1px solid #403d39; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #ccc5b9">
+<p style="margin: 0">© 2026 Robbie Ribeiro</p>
+<p style="margin: 0">Remote · [YOUR CITY]</p>
+</footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#eb5e28","options":["#eb5e28","#ccc5b9","#fffcf2"]},"$preview":{"width":1440,"height":2800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#eb5e28',
+      roles: [
+        { dates: 'Feb 2026 — Present', project: 'Nigerian Payroll Platform', role: 'Principal Architect & Developer · Fluenty IT', summary: 'Live multi-tenant payroll: PAYE tax, statutory deductions, payslips and compliance reports. Built solo, end to end.', tags: 'wolverine marten event-sourcing .net postgres next.js aws' },
+        { dates: 'Jun 2025 — Present', project: 'Property Leasing Management', role: 'Principal Architect & Developer · Fluenty IT', summary: 'Owns architecture, roadmap and support for a multi-tenant production system, delivered with agentic AI tooling.', tags: 'c# .net react cqrs postgres aws-sqs' },
+        { dates: 'Dec 2021 — Sep 2022', project: 'Partnership Services', role: 'Senior Full-Stack Developer · Clifford Chance', summary: 'Modernised a global partner-remuneration app: API to .NET 6, frontend to Angular 14, with wider test coverage.', tags: 'angular c# .net-6 cqrs mssql tdd' }
+      ],
+      skills: [
+        { group: 'ai / agentic', items: 'Agentic coding workflows · AI code review and test generation · context engineering' },
+        { group: 'backend', items: 'C# · .NET · ASP.NET · REST · CQRS · event sourcing · microservices' },
+        { group: 'frontend', items: 'Angular · React · Next.js · Tailwind CSS' },
+        { group: 'cloud & data', items: 'Azure · AWS · Terraform · SQL Server · PostgreSQL · Cosmos DB' },
+        { group: 'practice', items: 'TDD · Clean Architecture · SOLID · CI/CD · mentoring' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

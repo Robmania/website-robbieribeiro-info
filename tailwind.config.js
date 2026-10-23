@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx}'],
@@ -9,12 +11,21 @@ module.exports = {
     extend: {
       colors: {
         accent: {
-          50: '#fff4ee',
-          300: '#ff9a66',
-          400: '#ff7a3d',
-          500: '#ff5200',
-          600: '#d43e00',
+          50: '#fdf0ea',
+          300: '#f39a77',
+          400: '#ef7b4d',
+          500: '#eb5e28',
+          600: '#c44812',
         },
+        // Site palette: floral (light ground), dust (lines), charcoal
+        // (secondary text), carbon (dark ground / primary text).
+        floral: '#fffcf2',
+        dust: '#ccc5b9',
+        charcoal: '#403d39',
+        carbon: '#252422',
+      },
+      fontFamily: {
+        sans: ['"Inter Tight"', ...defaultTheme.fontFamily.sans],
       },
     },
     fontSize: {

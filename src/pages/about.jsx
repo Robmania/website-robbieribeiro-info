@@ -12,9 +12,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-accent-500 dark:text-zinc-200 dark:hover:text-accent-500"
+        className="group flex items-center text-[15px] font-medium transition hover:text-charcoal dark:hover:text-dust"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-accent-500" />
+        <Icon className="h-6 w-6 flex-none fill-charcoal transition group-hover:fill-accent-500 dark:fill-dust" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -31,7 +31,7 @@ export default function About() {
           content="I’m Robbie Ribeiro. I currently live in Durban, South Africa."
         />
       </Head>
-      <Container className="mt-16 sm:mt-32">
+      <Container className="mt-16 sm:mt-24">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
@@ -39,18 +39,19 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                className="h-auto w-full mix-blend-multiply dark:aspect-square dark:rounded-full dark:bg-floral dark:object-cover dark:object-[50%_30%] dark:mix-blend-normal dark:ring-[6px] dark:ring-charcoal"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Robbie Ribeiro.
+            <h1 className="text-5xl font-bold tracking-[-0.04em] sm:text-6xl">
+              I’m Robbie Ribeiro<span className="text-accent-500">.</span>
             </h1>
-          <div className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Seasoned Full‑Stack Engineer & Architect | <strong>C#, .NET, Angular & Azure</strong> | 20+ years
-          </div>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <p className="mt-6 text-2xl font-medium tracking-tight">
+              Seasoned Full‑Stack Engineer &amp; Architect | C#, .NET, Angular
+              &amp; Azure | 20+ years
+            </p>
+            <div className="mt-6 space-y-7 text-lg leading-relaxed text-charcoal dark:text-dust [&_strong]:font-semibold [&_strong]:text-carbon dark:[&_strong]:text-floral">
               <p>
                 I am a seasoned software developer contracting locally and internationally with over 20 years of expertise in the full spectrum of Microsoft .NET technologies.
                 I have a proven track record in executing end-to-end software development lifecycle, spanning initial conception, comprehensive analysis, and robust design, through to implementation and ongoing support.
@@ -58,17 +59,17 @@ export default function About() {
               </p>
 
               <p>
-                In recent years, I’ve extended this expertise into{' '}
-                <strong>agentic software development</strong>, leveraging AI-driven tooling to
-                accelerate delivery, elevate code quality, and streamline architecture and
-                infrastructure decisions across complex systems.
+                I’ve worked <strong>AI-first</strong> since 2025: coding agents
+                handle scaffolding, refactoring and tests, while I own the
+                architecture and security, and review every change before it
+                ships.
               </p>
 
               <p>
                 I am a partner in a software development consultancy{' '}
                 <a
                   href="https://www.codestream.co.za"
-                  className="font-medium text-accent-500 underline decoration-accent-500/20 underline-offset-2 transition hover:decoration-accent-500 dark:text-accent-400 dark:decoration-accent-400/30 dark:hover:decoration-accent-400"
+                  className="font-medium text-carbon underline decoration-accent-500 decoration-2 underline-offset-4 transition hover:text-charcoal dark:text-floral dark:hover:text-dust"
                 >
                   CodeStream
                 </a>
@@ -98,11 +99,23 @@ export default function About() {
               >
                 Follow on LinkedIn
               </SocialLink>
-              <li className="mt-8 border-t border-zinc-100 pt-8 text-sm font-medium text-zinc-800 dark:border-zinc-700/40 dark:text-zinc-200 dark:hover:text-accent-500">
-                Email me on robbie@codestream.co.za
+              <li className="mt-8 border-t border-dust pt-8 text-[15px] font-medium dark:border-charcoal">
+                Email me on{' '}
+                <a
+                  href="mailto:robbie@codestream.co.za"
+                  className="border-b border-accent-500 pb-0.5"
+                >
+                  robbie@codestream.co.za
+                </a>
               </li>
-              <li className="mt-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 dark:hover:text-accent-500">
-                Call me on +27 (0)82 497 2398
+              <li className="mt-3 text-[15px] font-medium">
+                Call me on{' '}
+                <a
+                  href="tel:+27824972398"
+                  className="border-b border-accent-500 pb-0.5"
+                >
+                  +27 (0)82 497 2398
+                </a>
               </li>
             </ul>
           </div>

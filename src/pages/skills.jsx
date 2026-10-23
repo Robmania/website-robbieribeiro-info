@@ -1,6 +1,54 @@
 import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
+let skillGroups = [
+  {
+    title: 'Agentic & AI-Assisted Development',
+    intro:
+      'AI-first since 2025: coding agents handle scaffolding, refactoring and tests, while I own the architecture and security, and review every change before it ships.',
+    items: [
+      'Agentic coding workflows embedded in day-to-day delivery',
+      'AI-assisted code review, refactoring, and test generation',
+      'Context engineering for large, long-lived codebases',
+      'Applying AI tooling to architecture and infrastructure decisions',
+    ],
+  },
+  {
+    title: 'Back-End Development',
+    items: [
+      'C#, .NET Core, ASP.NET, REST APIs',
+      'Entity Framework, CQRS, MediatR',
+      'Microservices Architecture',
+    ],
+  },
+  {
+    title: 'Front-End Development',
+    items: ['JavaScript, HTML, CSS', 'Angular, React, Razor, Tailwind CSS'],
+  },
+  {
+    title: 'Cloud & DevOps',
+    items: [
+      'Microsoft Azure (Functions, App Services, Data Factory)',
+      'AWS (S3, SQS)',
+      'CI/CD Pipelines, GitHub Actions, Azure DevOps',
+    ],
+  },
+  {
+    title: 'Data & Storage',
+    items: [
+      'SQL Server, PostgreSQL, Cosmos DB',
+      'Database Design & Query Optimization',
+    ],
+  },
+  {
+    title: 'Practices & Methodologies',
+    items: [
+      'TDD, Clean Architecture, SOLID Principles',
+      'Agile/Scrum, Team Mentorship',
+    ],
+  },
+]
+
 export default function Skills() {
   return (
     <>
@@ -15,67 +63,32 @@ export default function Skills() {
         title="Skills & Expertise"
         intro="I’m a seasoned full-stack developer with deep expertise across the Microsoft .NET ecosystem, specializing in end-to-end software solutions, from database management to server-side logic and dynamic user interfaces."
       >
-        <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex max-w-3xl flex-col space-y-10">
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Agentic & AI-Assisted Development</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-3">
-                In recent years I’ve extended this expertise into agentic software development, leveraging
-                AI-driven tooling to accelerate delivery, elevate code quality, and streamline architecture
-                and infrastructure decisions across complex systems.
-              </p>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>Agentic coding workflows embedded in day-to-day delivery</li>
-                <li>AI-assisted code review, refactoring, and test generation</li>
-                <li>Context engineering for large, long-lived codebases</li>
-                <li>Applying AI tooling to architecture and infrastructure decisions</li>
+        <div className="grid gap-x-12 gap-y-12 md:grid-cols-2">
+          {skillGroups.map((group) => (
+            <div
+              key={group.title}
+              className="border-t-2 border-carbon pt-4 dark:border-floral md:first:col-span-2"
+            >
+              <h2 className="text-[17px] font-semibold">{group.title}</h2>
+              {group.intro && (
+                <p className="mt-2 max-w-3xl text-base leading-relaxed text-charcoal dark:text-dust">
+                  {group.intro}
+                </p>
+              )}
+              <ul className="mt-3 space-y-1.5 text-base text-charcoal dark:text-dust">
+                {group.items.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="mt-[11px] h-1.5 w-1.5 flex-none rounded-full bg-accent-500"
+                    />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
-
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Back-End Development</h3>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>C#, .NET Core, ASP.NET, REST APIs</li>
-                <li>Entity Framework, CQRS, MediatR</li>
-                <li>Microservices Architecture</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Front-End Development</h3>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>JavaScript, HTML, CSS</li>
-                <li>Angular, React, Razor, Tailwind CSS</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Cloud & DevOps</h3>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>Microsoft Azure (Functions, App Services, Data Factory)</li>
-                <li>AWS (S3, SQS)</li>
-                <li>CI/CD Pipelines, GitHub Actions, Azure DevOps</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Data & Storage</h3>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>SQL Server, PostgreSQL, Cosmos DB</li>
-                <li>Database Design & Query Optimization</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 mb-2">Practices & Methodologies</h3>
-              <ul className="list-disc list-inside text-zinc-600 dark:text-zinc-400 space-y-1">
-                <li>TDD, Clean Architecture, SOLID Principles</li>
-                <li>Agile/Scrum, Team Mentorship</li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
-
       </SimpleLayout>
     </>
   )

@@ -40,6 +40,16 @@ export default function Document() {
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -51,7 +61,7 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
       </Head>
-      <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
+      <body className="flex h-full flex-col bg-floral text-carbon transition-colors duration-300 dark:bg-carbon dark:text-floral">
         <Main />
         <NextScript />
       </body>
